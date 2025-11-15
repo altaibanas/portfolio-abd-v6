@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دراسات الحالة | المحاسب الاستشاري - نجاحات عملائنا</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet"> -->
+    <style>
+        :root {
+            --primary: #1e40af;
+            --secondary: #0ea5e9;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gold: #d4af37;
+        }
+        
+        body {
+            /* font-family: 'Almarai', sans-serif; */
+            background-color: var(--light);
+            line-height: 1.8;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #0ea5e9 100%);
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #fbbf24 100%);
+        }
+        
+        .section-padding {
+            padding: 6rem 0;
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(to right, #1e40af, #0ea5e9);
+            /* -webkit-background-clip: text; */
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gold-text {
+            background: linear-gradient(to right, #d4af37, #fbbf24);
+            /* -webkit-background-clip: text; */
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-image {
+            border-radius: 24px;
+            box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .sticky-nav {
+            backdrop-filter: blur(16px);
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(30, 64, 175, 0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #fbbf24 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+        
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        .feature-badge {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .case-icon {
+            transition: all 0.4s ease;
+        }
+        
+        .card-hover:hover .case-icon {
+            transform: scale(1.15) rotate(5deg);
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links li:hover {
+            transform: translateX(-5px);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #1e40af, #0ea5e9);
+            /* -webkit-background-clip: text; */
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-right">
+    <!-- شريط التنقل -->
+    <nav class="sticky-nav fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <div class="gold-gradient text-white p-3 rounded-2xl shadow-lg">
+                        <i class="fas fa-balance-scale text-2xl"></i>
+                    </div>
+                    <div>
+                        <a href="index.html" class="text-2xl font-black text-gray-800">المحاسب<br><span class="gold-text">الاستشاري</span></a>
+                        <p class="text-xs text-gray-600 mt-1">مكتب محاسبي قانوني معتمد</p>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-10 space-x-reverse">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">الرئيسية</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">من نحن</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">خدماتنا</a>
+                    <a href="solutions.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">الحلول</a>
+                    <a href="cases.html" class="text-blue-600 font-medium transition-all duration-300 border-b-2 border-blue-600 pb-1">دراسات الحالة</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">المدونة</a>
+                    <a href="contact.html" class="btn-primary text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300">طلب استشارة</a>
+                </div>
+                
+                <!-- زر القائمة للموبايل -->
+                <div class="lg:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- القائمة المنسدلة للموبايل -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4 bg-white rounded-2xl mt-2 shadow-xl border border-gray-100">
+                <a href="index.html" class="block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition rounded-lg mx-2 my-1">الرئيسية</a>
+                <a href="about.html" class="block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition rounded-lg mx-2 my-1">من نحن</a>
+                <a href="services.html" class="block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition rounded-lg mx-2 my-1">خدماتنا</a>
+                <a href="solutions.html" class="block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition rounded-lg mx-2 my-1">الحلول</a>
+                <a href="cases.html" class="block py-3 px-4 text-blue-600 font-bold bg-blue-50 rounded-lg mx-2 my-1">دراسات الحالة</a>
+                <a href="blog.html" class="block py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition rounded-lg mx-2 my-1">المدونة</a>
+                <a href="contact.html" class="block py-3 px-4 text-blue-600 font-bold bg-blue-50 rounded-lg mx-2 my-1">طلب استشارة</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- قسم البطل -->
+    <section class="gradient-bg text-white pt-40 pb-32 overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-20 h-20 bg-white rounded-full"></div>
+            <div class="absolute bottom-20 right-20 w-32 h-32 bg-white rounded-full"></div>
+            <div class="absolute top-1/3 left-1/4 w-16 h-16 bg-white rounded-full"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-16 lg:mb-0">
+                    <div class="feature-badge">قصص نجاح عملائنا</div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">دراسات <span class="gold-text">الحالة</span></h1>
+                    <p class="text-xl text-blue-100 mb-8 max-w-2xl">تعرف على قصص نجاح عملائنا وكيف ساعدناهم في تحسين أدائهم المالي وزيادة أرباحهم من خلال حلولنا المحاسبية والمالية المبتكرة.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 sm:space-x-reverse">
+                        <a href="contact.html" class="btn-gold text-white px-8 py-4 rounded-xl font-bold text-lg text-center">كن قصة نجاح التالية</a>
+                        <a href="#cases" class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-700 transition-all duration-300 text-center">استكشف الدراسات</a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 flex justify-center relative">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="دراسات حالة المحاسب الاستشاري" class="hero-image w-full max-w-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم دراسات الحالة -->
+    <section id="cases" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-gray-800 mb-4 section-title">قصص <span class="text-gradient">النجاح</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">تعرف على كيفية مساعدتنا للشركات بمختلف أحجامها وتخصصاتها في تحسين أدائها المالي وزيادة أرباحها</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- دراسة حالة 1 -->
+                <div class="bg-gradient-to-br from-white to-blue-50 rounded-2xl p-8 card-hover">
+                    <div class="flex flex-col lg:flex-row items-start">
+                        <div class="lg:w-1/3 mb-6 lg:mb-0">
+                            <div class="bg-blue-100 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 case-icon">
+                                <i class="fas fa-building text-3xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-2xl font-black text-gray-800 mb-4">شركة التقنية المتطورة</h3>
+                            <p class="text-gray-600 mb-4">شركة ناشئة في مجال التقنية</p>
+                            <div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold inline-block">12 شهراً</div>
+                        </div>
+                        <div class="lg:w-2/3 lg:pr-4">
+                            <h4 class="text-xl font-black text-gray-800 mb-3">التحدي</h4>
+                            <p class="text-gray-600 mb-4">كانت الشركة تواجه صعوبات في إدارة سجلاتها المالية وتنظيم عملياتها المحاسبية، مما أدى إلى عدم دقة البيانات المالية وصعوبة في اتخاذ القرارات الاستراتيجية.</p>
+                            
+                            <h4 class="text-xl font-black text-gray-800 mb-3">الحل</h4>
+                            <p class="text-gray-600 mb-4">قمنا بتصميم وتنفيذ نظام محاسبي متكامل يشمل إمساك الدفاتر اليومية، وإعداد القوائم المالية الشهرية، وتحليل النتائج المالية، وتقديم التوصيات الاستراتيجية.</p>
+                            
+                            <h4 class="text-xl font-black text-gray-800 mb-3">النتائج</h4>
+                            <div class="grid grid-cols-2 gap-4 mb-4">
+                                <div class="bg-white rounded-xl p-4 text-center">
+                                    <div class="stat-number">42%</div>
+                                    <p class="text-gray-600 text-sm">زيادة في الأرباح</p>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 text-center">
+                                    <div class="stat-number">65%</div>
+                                    <p class="text-gray-600 text-sm">تحسين في التدفق النقدي</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- دراسة حالة 2 -->
+                <div class="bg-gradient-to-br from-white to-green-50 rounded-2xl p-8 card-hover">
+                    <div class="flex flex-col lg:flex-row items-start">
+                        <div class="lg:w-1/3 mb-6 lg:mb-0">
+                            <div class="bg-green-100 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 case-icon">
+                                <i class="fas fa-industry text-3xl text-green-600"></i>
+                            </div>
+                            <h3 class="text-2xl font-black text-gray-800 mb-4">مصنع الألمنيوم المتقدم</h3>
+                            <p class="text-gray-600 mb-4">شركة صناعية متوسطة الحجم</p>
+                            <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-bold inline-block">18 شهراً</div>
+                        </div>
+                        <div class="lg:w-2/3 lg:pr-4">
+                            <h4 class="text-xl font-black text-gray-800 mb-3">التحدي</h4>
+                            <p class="text-gray-600 mb-4">كان المصنع يعاني من عدم دقة في محاسبة التكاليف وارتفاع في المصروفات التشغيلية، مما أثر سلباً على ربحية الشركة وقدرتها التنافسية في السوق.</p>
+                            
+                            <h4 class="text-xl font-black text-gray-800 mb-3">الحل</h4>
+                            <p class="text-gray-600 mb-4">قمنا بتصميم وتنفيذ نظام متكامل لمحاسبة التكاليف يشمل تتبع تكاليف المواد والعمالة والتكاليف غير المباشرة، وتحليل هامش الربح لكل منتج.</p>
+                            
+                            <h4 class="text-xl font-black text-gray-800 mb-3">النتائج</h4>
+                            <div class="grid grid-cols-2 gap-4 mb-4">
+                                <div class="bg-white rounded-xl p-4 text-center">
+                                    <div class="stat-number">28%</div>
+                                    <p class="text-gray-600 text-sm">تخفيض في التكاليف</p>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 text-center">
+                                    <div class="stat-number">35%</div>
+                                    <p class="text-gray-600 text-sm">زيادة في الربحية</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- دراسة حالة 3 -->
+                <div class="bg-gradient-to-br from-white to-purple-50 rounded-2xl p-8 card-hover">
+                    <div class="flex flex-col lg:flex-row items-start">
+                        <div class="lg:w-1/3 mb-6 lg:mb-0">
+                            <div class="bg-purple-100 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 case-icon">
+                                <i class="fas fa-store text-3xl text-purple-600"></i>
+                            </div>
+                            <h3 class="text-2xl font-black text-gray-800 mb-4">سلسلة متاجر التجزئة</h3>
+                            <p class="text-gray-600 mb-4">شركة تجارية كبيرة</p>
+                            <div class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-bold inline-block">24 شهراً</div>
+                        </div>
+                        <div class="lg:w-2/3 lg:pr-4">
+                            <h4 class="text-xl font-black text-gray-800 mb-3">التحدي</h4>
+                            <p class="text-gray-600 mb-4">كانت الشركة تواجه تحديات في إدارة المخزون والتحكم في التكاليف التشغيلية، بالإضافة إلى صعوبات في تحليل أداء الفروع واتخاذ القرارات الاستراتيجية.</p>
+                            
+                            <h4 class="text-xl font-black text-gray-800 mb-3">الحل</h4>
+                            <p class="text-gray-600 mb-4">قمنا بتصميم وتنفيذ نظام متكامل لإدارة المخزون والتحليل المالي يشمل تتبع حركة البضائع، وتحليل هامش الربح، وتقييم أداء الفروع، وتقديم التوصيات الاستراتيجية.</p>
+                            
+                            <h4 class="text-xl font-black text-gray-800 mb-3">النتائج</h4>
+                            <div class="grid grid-cols-2 gap-4 mb-4">
+                                <div class="bg-white rounded-xl p-4 text-center">
+                                    <div class="stat-number">52%</div>
+                                    <p class="text-gray-600 text-sm">تحسين في إدارة المخزون</p>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 text-center">
+                                    <div class="stat-number">41%</div>
+                                    <p class="text-gray-600 text-sm">زيادة في المبيعات</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- دراسة حالة 4 -->
+                <div class="bg-gradient-to-br from-white to-yellow-50 rounded-2xl p-8 card-hover">
+                    <div class="flex flex-col lg:flex-row items-start">
+                        <div class="lg:w-1/3 mb-6 lg:mb-0">
+                            <div class="bg-yellow-100 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 case-icon">
+                                <i class="fas fa-laptop-medical text-3xl text-yellow-600"></i>
+                            </div>
+                            <h3 class="text-2xl font-black text-gray-800 mb-4">مستشفى التخصصي</h3>
+                            <p class="text-gray-600 mb-4">مؤسسة صحية كبيرة</p>
+                            <div class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-bold inline-block">15 شهراً</div>
+                        </div>
+                        <div class="lg:w-2/3 lg:pr-4">
+                            <h4 class="text-xl font-black text-gray-800 mb-3">التحدي</h4>
+                            <p class="text-gray-600 mb-4">كان المستشفى يعاني من عدم كفاءة في إدارة الفواتير الطبية والمطالبات التأمينية، مما أدى إلى تأخير في تحصيل المستحقات وتأثير سلبي على التدفق النقدي.</p>
+                            
+                            <h4 class="text-xl font-black text-gray-800 mb-3">الحل</h4>
+                            <p class="text-gray-600 mb-4">قمنا بتصميم وتنفيذ نظام متكامل لإدارة الفواتير والمطالبات التأمينية يشمل تتبع الفواتير الطبية، وإدارة المطالبات التأمينية، وتحسين عملية التحصيل.</p>
+                            
+                            <h4 class="text-xl font-black text-gray-800 mb-3">النتائج</h4>
+                            <div class="grid grid-cols-2 gap-4 mb-4">
+                                <div class="bg-white rounded-xl p-4 text-center">
+                                    <div class="stat-number">67%</div>
+                                    <p class="text-gray-600 text-sm">تحسين في عملية التحصيل</p>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 text-center">
+                                    <div class="stat-number">38%</div>
+                                    <p class="text-gray-600 text-sm">تقليل في الديون المعدومة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الإحصائيات -->
+    <section class="py-16 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="bg-white bg-opacity-10 rounded-2xl p-8">
+                    <div class="text-4xl md:text-5xl font-black mb-2 gold-text">300+</div>
+                    <p class="text-blue-100">عميل راضٍ</p>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-2xl p-8">
+                    <div class="text-4xl md:text-5xl font-black mb-2 gold-text">650+</div>
+                    <p class="text-blue-100">مشروع مكتمل</p>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-2xl p-8">
+                    <div class="text-4xl md:text-5xl font-black mb-2 gold-text">42%</div>
+                    <p class="text-blue-100">متوسط زيادة الأرباح</p>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-2xl p-8">
+                    <div class="text-4xl md:text-5xl font-black mb-2 gold-text">98%</div>
+                    <p class="text-blue-100">رضا العملاء</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم آراء العملاء -->
+    <section class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-gray-800 mb-4 section-title">آراء <span class="text-gradient">عملائنا</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">ما يقوله عملاؤنا عن تجربتهم مع المحاسب الاستشاري</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- رأي 1 -->
+                <div class="bg-white rounded-2xl p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="عميل" class="w-16 h-16 rounded-full ml-4 border-2 border-blue-500">
+                        <div>
+                            <h4 class="font-black text-gray-800">أحمد السعيد</h4>
+                            <p class="text-gray-600">مدير مالي - شركة التقنية المتطورة</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"لقد ساعدنا المحاسب الاستشاري في تنظيم سجلاتنا المالية بشكل ممتاز، مما ساهم في تحسين قراراتنا المالية وزيادة أرباحنا بنسبة 42% خلال عام واحد."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- رأي 2 -->
+                <div class="bg-white rounded-2xl p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="عميل" class="w-16 h-16 rounded-full ml-4 border-2 border-blue-500">
+                        <div>
+                            <h4 class="font-black text-gray-800">فاطمة العلي</h4>
+                            <p class="text-gray-600">مديرة العمليات - مصنع الألمنيوم المتقدم</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"بفضل المحاسب الاستشاري، استطعنا تحسين إدارة تكاليفنا وتقليل الهدر في العمليات، مما أدى إلى زيادة ربحيتنا بنسبة 35% خلال 18 شهراً."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- رأي 3 -->
+                <div class="bg-white rounded-2xl p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="عميل" class="w-16 h-16 rounded-full ml-4 border-2 border-blue-500">
+                        <div>
+                            <h4 class="font-black text-gray-800">خالد الحربي</h4>
+                            <p class="text-gray-600">المدير العام - سلسلة متاجر التجزئة</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"المحاسب الاستشاري لم يقدم لنا فقط خدمات محاسبية، بل قدم لنا حلولاً استراتيجية ساعدتنا في تحسين أداء فروعنا وزيادة مبيعاتنا بنسبة 41%."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اتصل بنا -->
+    <section class="py-16 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <h2 class="text-4xl font-black mb-4">هل تريد أن تكون قصة النجاح التالية؟</h2>
+                    <p class="text-xl text-blue-100 max-w-2xl">لا تتردد في التواصل معنا، نحن هنا لمساعدتك في جميع احتياجاتك المحاسبية والمالية. اطلب استشارة مجانية الآن!</p>
+                </div>
+                <div class="lg:w-1/2 flex justify-center lg:justify-end">
+                    <a href="contact.html" class="btn-gold text-white px-10 py-5 rounded-2xl font-black text-xl inline-flex items-center">
+                        <i class="fas fa-phone-alt ml-3"></i>
+                        اتصل بنا الآن
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 space-x-reverse mb-6">
+                        <div class="gold-gradient text-white p-3 rounded-xl">
+                            <i class="fas fa-balance-scale text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-black">المحاسب</span><br>
+                            <span class="gold-text font-bold">الاستشاري</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">نقدم خدمات محاسبية ومالية متكاملة بجودة عالية واحترافية تامة لتلبية احتياجات عملائنا وتحقيق أهدافهم المالية.</p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="bg-gray-800 text-gray-300 p-3 rounded-xl hover:bg-blue-600 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 text-gray-300 p-3 rounded-xl hover:bg-blue-600 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 text-gray-300 p-3 rounded-xl hover:bg-blue-600 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-black mb-6">روابط سريعة</h3>
+                    <ul class="space-y-4 footer-links">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">الرئيسية</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">من نحن</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">خدماتنا</a></li>
+                        <li><a href="solutions.html" class="text-gray-400 hover:text-white transition">الحلول</a></li>
+                        <li><a href="cases.html" class="text-gray-400 hover:text-white transition">دراسات الحالة</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition">المدونة</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-black mb-6">خدماتنا</h3>
+                    <ul class="space-y-4 footer-links">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">المحاسبة المالية</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">المراجعة والتدقيق</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">الاستشارات الضريبية</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">إعداد الميزانيات</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">التحليل المالي</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">الاستشارات المالية</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-black mb-6">اتصل بنا</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-400 ml-3"></i>
+                            الرياض، المملكة العربية السعودية
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-blue-400 ml-3"></i>
+                            +966 55 123 4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 ml-3"></i>
+                            info@accountant.com
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8 bg-gray-800 rounded-2xl p-6">
+                        <h4 class="font-black mb-3">النشرة البريدية</h4>
+                        <p class="text-gray-400 text-sm mb-4">اشترك لتصلك آخر المقالات والنصائح</p>
+                        <div class="flex">
+                            <input type="email" placeholder="بريدك الإلكتروني" class="bg-gray-700 text-white rounded-r-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <button class="bg-blue-600 text-white px-4 py-3 rounded-l-lg hover:bg-blue-700 transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>جميع الحقوق محفوظة &copy; 2023 المحاسب الاستشاري</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // تفعيل القائمة المنسدلة للموبايل
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // تأثيرات التمرير السلس للروابط
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // تأثيرات عند التمرير
+            window.addEventListener('scroll', function() {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 100) {
+                    nav.classList.add('sticky-nav');
+                } else {
+                    nav.classList.remove('sticky-nav');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
